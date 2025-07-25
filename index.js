@@ -7,9 +7,10 @@ mongoose.
     .then(()=> console.log("connected to db"))
     .catch((e)=> console.log(e));
 
-    const app = express();
-    app.use = express();
+const app = express();
 
-    app.use("/categoryR", CategoryRoute);
+app.use(express.json());
 
-    app.listen(3000, () => console.log("server started on port 3000"));
+app.use("/categoryR", CategoryRoute);
+
+app.listen(3000, () => console.log("server started on port 3000"));

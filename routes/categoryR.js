@@ -40,7 +40,7 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
     try {
         await Category.findByIdAndDelete(req.params.id);
-        res.json({ message: "O'chirildi" });
+        res.json({ message: "Ochirildi" });
     } catch (err) {
         res.status(400).json({ message: "Xatolik" });
     }
